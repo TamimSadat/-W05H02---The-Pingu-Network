@@ -40,20 +40,34 @@ public class Group {
      */
     public void removeUser(User user) {
         // TODO: Implementiere diese Methode entsprechend der Aufgabenstellung
+        User[] nMembers = new User[members.length - 1];
+        int k = 0;
+        for (int  i = 0; i < members.length; i++) {
+            if (members[i] == user) {
+                i++;
+            }
+            nMembers[k] = members[i];
+            k++;
+        }
+        members = nMembers;
     }
 
     /* ================ Getter und Setter ================ */
 
     public User getOwner() {
+
         return owner;
     }
     public String getName() {
+
         return name;
     }
     public String getDescription() {
+
         return description;
     }
     public User[] getMembers() {
+
         return members;
     }
 
@@ -66,9 +80,11 @@ public class Group {
         }
     }
     public void setName(String name) {
+
         this.name = name;
     }
     public void setDescription(String description) {
+
         this.description = description;
     }
 }
