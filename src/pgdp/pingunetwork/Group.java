@@ -23,13 +23,16 @@ public class Group {
 
         for (int  i = 0; i < members.length; i++) {
             if (members[i] == user) {
+                if (members[i] == owner) {
+                    nMembers[0] = owner;
+                    return;
+                }
                 return;
             }
             nMembers[i] = members[i];
         }
         nMembers[nMembers.length - 1] = user;
         members = nMembers;
-
     }
 
     /** Entfernt das übergebene User-Objekt aus dem 'members'-Array.
@@ -46,8 +49,10 @@ public class Group {
             if (members[i] == user) {
                 i++;
             }
-            nMembers[k] = members[i];
-            k++;
+            else {
+                nMembers[k] = members[i];
+                k++;
+            }
         }
         members = nMembers;
     }

@@ -112,6 +112,8 @@ public class User {
      */
     public void interact(Post post, int interactionType) {
         // TODO: Implementiere diese Methode
+       Interaction newInteraction = new Interaction(this, interactionType);
+       post.addInteraction(newInteraction);
     }
 
     /** Fügt einen neuen Post mit dem übergebenen Titel und Inhalt den 'posts' dieses Nutzers hinzu.
@@ -120,6 +122,12 @@ public class User {
      */
     public void post(String title, String content) {
         // TODO: Implementiere diese Methode
+        Post[] eigenePosts = new Post[posts.length + 1];
+        Post newPost = new Post(title, content);
+        for (int i = 0; i < posts.length + 1; i++) {
+            eigenePosts[i] = posts[i];
+        }
+        eigenePosts[posts.length] = newPost;
     }
 
     /** Fügt einen neuen Kommentar mit dem übergebenen Titel und Inhalt dem übergebenen Post hinzu.
