@@ -15,7 +15,7 @@ public class Interaction {
         return interactionType;
     }
 
-    public User getNutzer() {
+    public User getUser() {
         return nutzer;
     }
 
