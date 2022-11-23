@@ -137,8 +137,9 @@ public class User {
      */
     public void comment(Post post, String title, String content) {
         // TODO: Implementiere diese Methode
-
-
+        Post newComment = new Post(title, content);
+        post.addComment(newComment);
+        post(title, content);
     }
 
     /* ================ Getter und Setter ================ */
