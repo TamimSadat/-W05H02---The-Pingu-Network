@@ -15,6 +15,7 @@ public class Picture {
 
         height = data.length;
         width = data[0].length;
+        thumbnails = new Picture[0];
     }
 
     public void setThumbnails(Picture[] thumbnails) {
