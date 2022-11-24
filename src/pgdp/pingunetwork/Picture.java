@@ -9,10 +9,9 @@ public class Picture {
 
     private Picture[] thumbnails;
 
-    public Picture(String location, int[][] data, Picture[] thumbnails) {
+    public Picture(String location, int[][] data) {
         this.location = location;
         this.data = data;
-        this.thumbnails = thumbnails;
 
         height = data.length;
         width = data[0].length;
