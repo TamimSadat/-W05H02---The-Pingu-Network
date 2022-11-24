@@ -10,9 +10,10 @@ public class User {
     private User[] friends;
     private Picture profilePicture;
 
-    public User(String name, String description) {
+    public User(String name, String description, Picture profilePicture) {
         this.name = name;
         this.description = description;
+        this.profilePicture = profilePicture;
 
         groups = new Group[0];
         posts = new Post[0];
