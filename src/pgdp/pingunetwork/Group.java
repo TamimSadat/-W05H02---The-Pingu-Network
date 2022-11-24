@@ -100,4 +100,9 @@ public class Group {
 
         this.description = description;
     }
+
+    public void setPicture(Picture picture) {
+
+        this.picture = picture;
+    }
 }
