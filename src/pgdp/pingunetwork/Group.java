@@ -47,7 +47,7 @@ public class Group {
         int k = 0;
         for (int  i = 0; i < members.length; i++) {
             if (members[i] == user) {
-                i++;
+                //i++;
             }
             else {
                 nMembers[k] = members[i];

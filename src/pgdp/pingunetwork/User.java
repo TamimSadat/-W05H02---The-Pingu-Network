@@ -102,7 +102,6 @@ public class User {
         if (found) {
             groups = nGroups;
         }
-
         group.removeUser(this);
     }
 
