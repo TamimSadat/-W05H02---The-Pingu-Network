@@ -8,6 +8,7 @@ public class User {
     private Group[] groups;
     private Post[] posts;
     private User[] friends;
+    private Picture profilePicture;
 
     public User(String name, String description) {
         this.name = name;
@@ -157,6 +158,10 @@ public class User {
     }
     public User[] getFriends() {
         return friends;
+    }
+
+    public Picture getProfilePicture() {
+        return profilePicture;
     }
 
     public void setName(String name) {

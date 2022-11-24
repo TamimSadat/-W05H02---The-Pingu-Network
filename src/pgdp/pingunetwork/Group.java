@@ -6,11 +6,14 @@ public class Group {
     private String name;
     private String description;
     private User[] members;
+    private Picture picture;
 
-    public Group(String name, String description, User owner) {
+    public Group(String name, String description, User owner, Picture picture) {
         this.name = name;
         this.description = description;
         this.owner = owner;
+        this.picture = picture;
+
         members = new User[1];
         members[0] = owner;
     }
@@ -75,6 +78,11 @@ public class Group {
 
         return members;
     }
+
+    public Picture getPicture() {
+        return picture;
+    }
+
 
     public void setOwner(User owner) {
         for (int i = 0; i < members.length; i++) {
