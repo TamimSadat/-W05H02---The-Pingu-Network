@@ -12,10 +12,16 @@ public class Picture {
     public Picture(String location, int[][] data) {
         this.location = location;
         this.data = data;
+        this.height = data.length;
+        this.width = data[0].length;
     }
 
     public void setThumbnails(Picture[] thumbnails) {
         this.thumbnails = thumbnails;
+    }
+
+    public Picture[] getThumbnail() {
+        return thumbnails;
     }
 
     public String getLocation() {
