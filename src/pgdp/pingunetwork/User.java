@@ -127,13 +127,11 @@ public class User {
         Post newPost = new Post(title, content);
 
         for (int i = 0; i < posts.length; i++) {
-            if (posts[i] == newPost ) {
-                return;
-            }
             eigenePosts[i] = posts[i];
         }
-        eigenePosts[eigenePosts.length - 1] = newPost;
-        posts = eigenePosts;
+        eigenePosts[posts.length] = newPost;
+        this.posts = eigenePosts;
+
     }
 
     /** Fügt einen neuen Kommentar mit dem übergebenen Titel und Inhalt dem übergebenen Post hinzu.
@@ -147,13 +145,10 @@ public class User {
         Post[] newPost = new Post[posts.length + 1];
         post.addComment(newComment);
         for (int i = 0; i < posts.length; i++) {
-            if (posts[i] == post) {
-                return;
-            }
             newPost[i] = posts[i];
         }
         newPost[posts.length] = newComment;
-        posts = newPost;
+        this.posts = newPost;
 
     }
 
