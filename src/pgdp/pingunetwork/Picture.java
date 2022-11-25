@@ -11,10 +11,10 @@ public class Picture {
 
     public Picture(String location, int[][] data) {
         if (data.length == 0) {
-           width = 0;
+            this.width = 0;
         }
         else {
-            width = data[0].length;
+            this.width = data[0].length;
         }
         this.location = location;
         this.data = data;
