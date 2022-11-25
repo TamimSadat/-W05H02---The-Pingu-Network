@@ -128,7 +128,7 @@ public class User {
         for (int i = 0; i < posts.length + 1; i++) {
             eigenePosts[i] = posts[i];
         }
-        eigenePosts[posts.length] = newPost;
+        eigenePosts[eigenePosts.length - 1] = newPost;
         posts = eigenePosts;
     }
 
