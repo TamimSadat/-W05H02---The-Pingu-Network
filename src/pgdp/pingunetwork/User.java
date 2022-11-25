@@ -128,7 +128,7 @@ public class User {
         for (int i = 0; i < posts.length + 1; i++) {
             eigenePosts[i] = posts[i];
         }
-        eigenePosts[eigenePosts.length - 1] = newPost;
+        eigenePosts[posts.length] = newPost;
         posts = eigenePosts;
     }
 
@@ -140,8 +140,15 @@ public class User {
     public void comment(Post post, String title, String content) {
         // TODO: Implementiere diese Methode
         Post newComment = new Post(title, content);
+        Post[] newPost = new Post[posts.length + 1];
         post.addComment(newComment);
         post(title, content);
+        for (int i = 0; i < posts.length; i++) {
+            newPost[i] = posts[i];
+        }
+        newPost[posts.length] = newComment;
+        posts = newPost;
+
     }
 
     /* ================ Getter und Setter ================ */
