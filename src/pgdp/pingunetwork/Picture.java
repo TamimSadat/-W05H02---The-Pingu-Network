@@ -13,8 +13,8 @@ public class Picture {
         this.location = location;
         this.data = data;
 
-        this.height = data.length;
-        this.width = data[0].length;
+        height = data.length;
+        width = data[0].length;
         thumbnails = new Picture[0];
     }
 
@@ -22,9 +22,6 @@ public class Picture {
         this.thumbnails = thumbnails;
     }
 
-    public Picture[] getThumbnail() {
-        return thumbnails;
-    }
 
     public String getLocation() {
         return location;
