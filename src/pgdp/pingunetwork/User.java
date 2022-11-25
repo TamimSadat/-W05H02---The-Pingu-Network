@@ -129,6 +129,7 @@ public class User {
             eigenePosts[i] = posts[i];
         }
         eigenePosts[posts.length] = newPost;
+        posts = eigenePosts;
     }
 
     /** Fügt einen neuen Kommentar mit dem übergebenen Titel und Inhalt dem übergebenen Post hinzu.
