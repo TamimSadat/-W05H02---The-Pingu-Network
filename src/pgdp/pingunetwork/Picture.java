@@ -15,13 +15,15 @@ public class Picture {
 
         height = data.length;
         width = data[0].length;
-        thumbnails = new Picture[0];
+        thumbnails = new Picture[data.length];
     }
 
     public void setThumbnails(Picture[] thumbnails) {
         this.thumbnails = thumbnails;
     }
-
+    public Picture[] getThumbnail() {
+        return thumbnails;
+    }
 
     public String getLocation() {
         return location;
