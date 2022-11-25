@@ -26,7 +26,7 @@ public class Picture {
     public void setThumbnails(Picture[] thumbnails) {
         this.thumbnails = thumbnails;
     }
-    public Picture[] getThumbnail() {
+    public Picture[] getThumbnails() {
         return thumbnails;
     }
 
