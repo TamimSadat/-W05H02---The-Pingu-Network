@@ -125,7 +125,11 @@ public class User {
         // TODO: Implementiere diese Methode
         Post[] eigenePosts = new Post[posts.length + 1];
         Post newPost = new Post(title, content);
+
         for (int i = 0; i < posts.length; i++) {
+            if (posts[i] == newPost ) {
+                return;
+            }
             eigenePosts[i] = posts[i];
         }
         eigenePosts[posts.length] = newPost;
