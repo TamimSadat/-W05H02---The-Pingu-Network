@@ -10,12 +10,15 @@ public class Picture {
     private Picture[] thumbnails;
 
     public Picture(String location, int[][] data) {
+        if (data.length == 0) {
+            return;
+        }
         this.location = location;
         this.data = data;
 
         height = data.length;
         width = data[0].length;
-        thumbnails = new Picture[data.length];
+        thumbnails = new Picture[0];
     }
 
     public void setThumbnails(Picture[] thumbnails) {
