@@ -13,8 +13,8 @@ public class Picture {
         this.location = location;
         this.data = data;
 
-        height = data.length;
-        width = data[0].length;
+        this.height = data.length;
+        this.width = data[0].length;
         thumbnails = new Picture[0];
     }
 
