@@ -142,7 +142,6 @@ public class User {
         Post newComment = new Post(title, content);
         Post[] newPost = new Post[posts.length + 1];
         post.addComment(newComment);
-        post(title, content);
         for (int i = 0; i < posts.length; i++) {
             newPost[i] = posts[i];
         }
