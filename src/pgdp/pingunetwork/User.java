@@ -132,7 +132,7 @@ public class User {
             }
             eigenePosts[i] = posts[i];
         }
-        eigenePosts[posts.length] = newPost;
+        eigenePosts[eigenePosts.length - 1] = newPost;
         posts = eigenePosts;
     }
 
