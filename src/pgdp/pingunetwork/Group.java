@@ -48,9 +48,14 @@ public class Group {
         // TODO: Implementiere diese Methode entsprechend der Aufgabenstellung
         User[] nMembers = new User[members.length - 1];
         int k = 0;
+
         for (int  i = 0; i < members.length; i++) {
             if (members[i] == user) {
                 //i++;
+                if (user == owner) {
+                    members[0] = owner;
+                }
+                return;
             }
             else {
                 nMembers[k] = members[i];
