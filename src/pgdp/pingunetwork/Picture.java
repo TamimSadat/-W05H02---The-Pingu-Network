@@ -11,14 +11,16 @@ public class Picture {
 
     public Picture(String location, int[][] data) {
         if (data.length == 0) {
-            return;
+           width = 0;
+        }
+        else {
+            width = data[0].length;
         }
         this.location = location;
         this.data = data;
-
         height = data.length;
-        width = data[0].length;
         thumbnails = new Picture[0];
+
     }
 
     public void setThumbnails(Picture[] thumbnails) {
