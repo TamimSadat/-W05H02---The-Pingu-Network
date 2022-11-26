@@ -23,18 +23,19 @@ public class Group {
      */
     public void addUser(User user) {
         User[] nMembers = new User[members.length + 1];
-
+        int k = 0;
         for (int  i = 0; i < members.length; i++) {
             if (members[i] == user) {
                 if (members[i] == owner) {
                     nMembers[0] = owner;
-                    return;
                 }
-                return;
             }
-            nMembers[i] = members[i];
+            else {
+                nMembers[k] = members[i];
+                k++;
+            }
         }
-        nMembers[nMembers.length - 1] = user;
+        nMembers[members.length] = user;
         members = nMembers;
     }
 
@@ -46,23 +47,45 @@ public class Group {
      */
     public void removeUser(User user) {
         // TODO: Implementiere diese Methode entsprechend der Aufgabenstellung
-        User[] nMembers = new User[members.length - 1];
-        int k = 0;
-
-        for (int  i = 0; i < members.length; i++) {
-            if (members[i] == user) {
-                //i++;
-                if (user == owner) {
-                    members[0] = owner;
-                }
-                return;
-            }
-            else {
-                nMembers[k] = members[i];
-                k++;
+        int x = 0;
+        for (int i = 0; i < members.length; i++) {//Geprüft an welcher Stelle der Owner ist
+            if (members[i] == owner) {
+                x = i;
+                break;
             }
         }
-        members = nMembers;
+        int y = 0;
+        for (int i = 0; i < members.length; i++) {//Geprüft ob User in Members enthalten
+            if (members[i] == user) {
+                y++;
+                break;
+            }
+        }
+        if (y == 0) {//Wenn User nicht enthalten, dann tue nichts
+
+        }
+        else {
+            int i = 0;
+            User[] nMembers = new User[members.length - 1];
+            for (int  k = 0; k < members.length; k++) {
+
+                if (members[k] != user) {
+                    nMembers[i] = members[k];
+                    i++;
+                }
+                else {
+                   // k++;
+                }
+            }
+            if (user == owner && nMembers.length < 1) {
+                owner = null;
+            }
+            else if (user == owner) {
+                owner = nMembers[0];
+            }
+            this.members = nMembers;
+        }
+
     }
 
     /* ================ Getter und Setter ================ */
